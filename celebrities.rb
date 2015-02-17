@@ -3,37 +3,38 @@ require_relative "testing_library"
 celebs = ["Britney", "Miley", "Madonna", "Cher", "Bruno", "Michael"]
 
 def how_many_celebrities(celebs)
-
+celebs.count
 end
 
 
 def name_lengths(celebs)
-
+celebs.map {|celebrity| celebrity.length}
 end
 
 
 def reverse_celebrity_names(celebs)
-
+celebs.map {|celebrity| celebrity.reverse}
 end
 
 
 def first_three_celebrities_with_each(celebs)
-
+celebs.each
 end
 
 
 def first_three_celebrities_without_each(celebs)
-
+celebs[0..2]
 end
 
 
 def reverse_case_celebrities_names(celebs)
-
+  celebs.map {|celebrity| celebrity.swapcase}
 end
 
 
 def sum_of_all_celebrity_name_lengths(celebs)
-
+  y = celebs.map {|celebrity| celebrity.length}
+  y.inject {|sum,x| sum + x }
 end
 
 
