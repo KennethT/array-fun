@@ -18,7 +18,7 @@ end
 
 
 def first_three_celebrities_with_each(celebs)
-celebs.each
+  celebs.each {|celeb| puts celeb}.first(3)
 end
 
 
@@ -39,7 +39,12 @@ end
 
 
 def celebrities_with_long_names(celebs)
-
+  celebs.map {|x|
+    if x.length >= 6
+      true
+      else
+      false
+    end}
 end
 
 
